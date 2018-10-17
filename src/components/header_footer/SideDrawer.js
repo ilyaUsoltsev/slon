@@ -1,4 +1,5 @@
 import React from 'react';
+import {scroller} from 'react-scroll';
 
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -6,6 +7,18 @@ import ListItem from '@material-ui/core/ListItem'
 
 
 const SideDrawer = (props) => {
+
+    const scrollToElement = (element)=>{
+        scroller.scrollTo(element,{
+            duration:1500,
+            delay:100,
+            smooth:true,
+            offset:-100
+        })
+        props.onClose(false);
+    }
+
+
     return (
         <div>
             <Drawer
@@ -14,19 +27,19 @@ const SideDrawer = (props) => {
                 onClose={()=>props.onClose(false)}
             >
             <List component="nav">
-                <ListItem button onClick={()=>console.log('Featured')}>Music</ListItem>
+                <ListItem button onClick={()=>scrollToElement('Highlight')}>История</ListItem>
             </List>
             <List component="nav">
-                <ListItem button onClick={()=>console.log('Featured')}>Tour</ListItem>
+                <ListItem button onClick={()=>scrollToElement('Music')}>Музыка</ListItem>
             </List>
             <List component="nav">
-                <ListItem button onClick={()=>console.log('Featured')}>Band</ListItem>
+                <ListItem button onClick={()=>scrollToElement('Tour')}>Тур</ListItem>
             </List>
             <List component="nav">
-                <ListItem button onClick={()=>console.log('Featured')}>Pricing</ListItem>
+                <ListItem button onClick={()=>scrollToElement('Pricing')}>Команда</ListItem>
             </List>
             <List component="nav">
-                <ListItem button onClick={()=>console.log('Featured')}>Contacts</ListItem>
+                <ListItem button onClick={()=>scrollToElement('Guess')}>Угадай Мелодию</ListItem>
             </List>
             </Drawer>
         </div>

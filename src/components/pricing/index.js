@@ -43,7 +43,7 @@ class Pricing extends Component {
             </Zoom>
 
         ))
-    )
+    );
 
     render() {
         return (

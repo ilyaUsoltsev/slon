@@ -28,8 +28,9 @@ body {
 }
 
 .center_wrapper {
-    width: 900px;
+    max-width: 900px;
     margin:0 auto;
+    overflow: auto;
 }
 
 
@@ -83,6 +84,7 @@ footer .footer_copyright {
 .carrousel_image {
     
     background-size: cover !important;
+    background-position: center;
 }
 
 .artist_name {
@@ -255,14 +257,14 @@ footer .footer_copyright {
     color: #f8f8f8;
     text-align: center;
     font-size: 30px;
-    /* margin: 0; */
+    margin: 0;
     padding-top:0;
     margin-bottom: 30px;
 }
 
 .pricing_wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .pricing_wrapper .pricing_item{
     flex-grow: 1;

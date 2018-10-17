@@ -7,17 +7,32 @@ import Pricing from './components/pricing';
 import Footer from './components/header_footer/Footer';
 import Music from './components/Music/Music';
 import Tour from './components/Tour/Tour';
+import {Element} from 'react-scroll';
+import Guess from './components/Guess';
 
 class App extends Component {
   render() {
     return (
-      <div className="App" style={{background:"perl-white",height:"1500px"}}>
+      <div className="App" style={{background:"perl-white"}}>
         <Header />
         <Featured />
-        <Highlight />
-        <Music />
-        <Tour />
-        <Pricing />
+        <Element name="Highlight">
+          <Highlight />
+        </Element>
+        <Element name="Music">
+          <Music />
+        </Element>
+        <Element name="Tour">
+          <Tour />
+        </Element>
+        <Element name="Guess">
+          <Guess />
+        </Element>
+        <Element name="Pricing">
+         <Pricing />
+        </Element>
+
+       
         <Footer />
       </div>
     );
