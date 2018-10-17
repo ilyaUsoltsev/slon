@@ -8,7 +8,7 @@ import Footer from './components/header_footer/Footer';
 import Music from './components/Music/Music';
 import Tour from './components/Tour/Tour';
 import {Element} from 'react-scroll';
-import Guess from './components/Guess';
+import Logo from './components/Logo/Logo'
 
 class App extends Component {
   render() {
@@ -19,15 +19,13 @@ class App extends Component {
         <Element name="Highlight">
           <Highlight />
         </Element>
-        <Element name="Music">
+        <Element className="flex" name="Music">
           <Music />
+          <Logo/>
         </Element>
         <Element name="Tour">
           <Tour />
-        </Element>
-        <Element name="Guess">
-          <Guess />
-        </Element>
+        </Element>      
         <Element name="Pricing">
          <Pricing />
         </Element>
